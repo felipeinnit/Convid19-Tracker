@@ -61,7 +61,6 @@ const onCountryChange = async (event) => {
   })
 };
 
-
   return (
     <div className="app">
 
@@ -71,7 +70,7 @@ const onCountryChange = async (event) => {
       <h1>Covid-19 Tracker</h1>
       <FormControl className="app_dropdown">
         <Select variant="outlined" onChange={onCountryChange} value={country}>
-           <MenuItem value="worldwide">Worldwide</MenuItem>
+           <MenuItem className="dropdown_world" value="worldwide">Worldwide</MenuItem>
           {/* mapping all the countries */}
           {countries.map(country=>(
             <MenuItem value={country.value}>{country.name}</MenuItem>
