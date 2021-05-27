@@ -5,6 +5,8 @@
   background: #3825b8 !important;
   border-radius: 20px !important;
   color: white !important;
+  border: 1px solid;
+  display: flex !important;
 }
 
 .infoBox:last-child {
@@ -13,7 +15,15 @@
 
 .infoBox_cases {
   color: #fd6362;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 0.1rem;
+}
+
+@media (max-width: 900px) {
+  .infoBox:last-child {
+    margin: 0px;
+  }
+  .infoBox_cases {
+    font-size: 1.5rem;
+  }
 }

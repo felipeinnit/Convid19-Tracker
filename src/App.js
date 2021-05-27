@@ -70,7 +70,7 @@ const onCountryChange = async (event) => {
       <h1>Covid-19 Tracker</h1>
       <FormControl className="app_dropdown">
         <Select variant="outlined" onChange={onCountryChange} value={country}>
-           <MenuItem className="dropdown_world" value="worldwide">Worldwide</MenuItem>
+           <MenuItem className="dropdown_world" value="worldwide"><span>Worldwide</span></MenuItem>
           {/* mapping all the countries */}
           {countries.map(country=>(
             <MenuItem value={country.value}>{country.name}</MenuItem>
@@ -80,7 +80,6 @@ const onCountryChange = async (event) => {
       </div>
       
       <div className="app_stats">
-
           {/* today cases need to find a new api or return null */}
           <InfoBox
           title="Coranavirus Cases"
@@ -93,22 +92,18 @@ const onCountryChange = async (event) => {
           total={prettyPrintStat(countryInfo.recovered)}/>
 
           <InfoBox
-            title="Deaths"
-            cases={prettyPrintStat(countryInfo.todayDeaths)}
-            total={prettyPrintStat(countryInfo.deaths)}
-            />
-
+          title="Deaths"
+          cases={prettyPrintStat(countryInfo.todayDeaths)}
+          total={prettyPrintStat(countryInfo.deaths)}/>
       </div>
 
-      <h3>Worldwide new cases</h3>
-              <LineGraph casesType={casesType} />
-      </div>    
-
+      <h3 className="lines_w">Worldwide new cases</h3>
+              <LineGraph className="lines" casesType={casesType} />
+      </div>
       <Card className="app_right">
             <CardContent>
               <h3>Total cases by country</h3>
               <Table countries={tableData}/>
-              
             </CardContent>
       </Card>
     </div>

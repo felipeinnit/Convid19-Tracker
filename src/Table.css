@@ -1,8 +1,15 @@
 .table {
-  margin: 20px;
+  margin: 10px 10px 0 10px;
   overflow: scroll;
   height: 600px;
-  color: #6a5d5d;
+  color: #f7c35b;
+  border-radius: 20px;
+  border: 1px solid;
+  text-align: left;
+}
+
+.table::-webkit-scrollbar {
+  display: none;
 }
 
 .table tr {
@@ -15,5 +22,9 @@
 }
 
 .table tr:nth-of-type(odd) {
-  background-color: #f3f2f8;
+  background-color: #191448;
+}
+
+.scrollable-element {
+  scrollbar-color: #87ceeb #ff5621;
 }
