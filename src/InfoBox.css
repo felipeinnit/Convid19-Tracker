@@ -2,24 +2,18 @@
   flex: 1;
   margin-right: 20px;
   margin-bottom: 20px;
+  background: #3825b8 !important;
+  border-radius: 20px !important;
+  color: white !important;
 }
 
 .infoBox:last-child {
-  margin-right: 0;
+  margin-right: 20px;
 }
 
 .infoBox_cases {
-  color: #cc1034;
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.infoBox_total {
-  color: #6c757d;
-  font-size: 0.8rem !important;
-  font-weight: 700 !important;
-}
-
-.infoBox-selected {
-  border-top: 10px red;
+  color: #fd6362;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.1rem;
 }
